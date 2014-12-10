@@ -24,6 +24,7 @@ Bundle 'digitaltoad/vim-jade'
 Bundle 'tpope/vim-rails'
 Bundle 'bling/vim-airline'
 Bundle 'tpope/vim-fugitive'
+Bundle 'scrooloose/nerdtree'
 
 " Airline
 set laststatus=2
@@ -51,11 +52,6 @@ augroup myfiletypes
   autocmd FileType ruby,eruby,yaml setlocal path+=lib
 augroup END
 
-if has("autocmd")
-  " ProShip code
-  autocmd BufRead *.pss set filetype=vb tabstop=4 shiftwidth=4 expandtab
-endif
-
 set number
 set colorcolumn=80
 highlight ColorColumn ctermbg=4
@@ -75,3 +71,14 @@ map <Leader>a :call RunAllSpecs()<CR>
 " CtrlP
 let g:ctrlp_user_command = ['.git/', 'cd %s && git ls-files . -oc --exclude-standard']
 set wildignore+=*/tmp/*,*/node_modules/*,*/log/*,*/vendor/*
+
+" NERDTree mapping
+map <C-n> :NERDTreeToggle<CR>
+
+" My own custom mappings for tabs and panes
+map <C-j> <Esc>:tabprev<CR>
+map <C-k> <Esc>:tabnext<CR>
+map <C-e> <C-w><C-w>
+
+" Allow mouse manipulation
+set mouse=a
