@@ -37,6 +37,8 @@ syntax enable
 filetype plugin indent on " Enable filetype-specific indenting and plugins
 
 " Solarized theme
+" Not sure why, but if not, vim solarized does not work properly with terminal solarized
+set t_Co=256
 set background=dark
 colorscheme solarized
 
@@ -60,13 +62,6 @@ set hlsearch
 " Show trailing whitespace:
 :highlight ExtraWhitespace ctermbg=red guibg=red
 :match ExtraWhitespace /\s\+$/
-
-" RSpec.vim stuff
-let g:rspec_command = "!bundle exec spec {spec}"
-map <Leader>t :call RunCurrentSpecFile()<CR>
-map <Leader>s :call RunNearestSpec()<CR>
-map <Leader>l :call RunLastSpec()<CR>
-map <Leader>a :call RunAllSpecs()<CR>
 
 " CtrlP
 let g:ctrlp_user_command = ['.git/', 'cd %s && git ls-files . -oc --exclude-standard']
