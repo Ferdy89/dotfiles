@@ -56,6 +56,12 @@ set number
 set colorcolumn=80
 highlight ColorColumn ctermbg=4
 set hlsearch
+set incsearch
+set ignorecase
+set smartcase
+
+set nostartofline " restart at last cursor position - YAY!
+set scrolloff=10  " keep 10 lines above and below position
 
 " Show trailing whitespace:
 :highlight ExtraWhitespace ctermbg=red guibg=red
@@ -82,3 +88,5 @@ map <C-e> <C-w><C-w>
 
 " Allow mouse manipulation
 set mouse=a
+
+set clipboard=unnamed
