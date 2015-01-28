@@ -25,6 +25,8 @@ Bundle 'tpope/vim-rails'
 Bundle 'bling/vim-airline'
 Bundle 'tpope/vim-fugitive'
 Bundle 'scrooloose/nerdtree'
+Bundle 'terryma/vim-multiple-cursors'
+Bundle 'ag.vim'
 
 " Airline
 set laststatus=2
@@ -74,7 +76,7 @@ let g:ctrlp_user_command = ['.git/', 'cd %s && git ls-files . -oc --exclude-stan
 set wildignore+=*/tmp/*,*/node_modules/*,*/log/*,*/vendor/*
 
 " NERDTree mapping
-map <C-n> :NERDTreeToggle<CR>
+map <C-m> :NERDTreeToggle<CR>
 
 " My own custom mappings for tabs and panes
 map <C-j> <Esc>:tabprev<CR>
