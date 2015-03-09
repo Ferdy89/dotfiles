@@ -25,6 +25,7 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'scrooloose/nerdtree'
 Bundle 'terryma/vim-multiple-cursors'
 Bundle 'ag.vim'
+Bundle 'godlygeek/tabular'
 
 " Airline
 set laststatus=2 " Displays all the time
@@ -80,6 +81,7 @@ map <C-m> :NERDTreeFind<CR>
 map <C-j> <Esc>:tabprev<CR>
 map <C-k> <Esc>:tabnext<CR>
 map <C-e> <C-w><C-w>
+map <C-u> <Esc>:Gblame<CR>
 
 " Allow mouse manipulation
 set mouse=a
