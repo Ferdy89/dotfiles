@@ -23,7 +23,6 @@ Bundle 'tpope/vim-rails'
 Bundle 'bling/vim-airline'
 Bundle 'tpope/vim-fugitive'
 Bundle 'scrooloose/nerdtree'
-Bundle 'terryma/vim-multiple-cursors'
 Bundle 'ag.vim'
 Bundle 'godlygeek/tabular'
 
