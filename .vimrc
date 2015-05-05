@@ -25,13 +25,12 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'scrooloose/nerdtree'
 Bundle 'ag.vim'
 Bundle 'godlygeek/tabular'
+Bundle 'tpope/vim-endwise'
+Bundle 'msanders/snipmate.vim'
 
 " Airline
 set laststatus=2 " Displays all the time
 
-" ================
-" Ruby stuff
-" ================
 syntax on                 " Enable syntax highlighting
 syntax enable
 filetype plugin indent on " Enable filetype-specific indenting and plugins
@@ -48,11 +47,9 @@ set shiftwidth=2
 set expandtab
 set autoindent
 
-augroup myfiletypes
-  " Clear old autocmds in group
-  autocmd!
-  autocmd FileType ruby,eruby,yaml setlocal path+=lib
-augroup END
+autocmd FileType ruby,eruby let g:rubycomplete_buffer_loading = 1
+autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
+autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
 
 set number
 set colorcolumn=80
@@ -86,3 +83,6 @@ map <C-u> <Esc>:Gblame<CR>
 set mouse=a
 
 set clipboard=unnamed
+
+" Disable parenthesis (and similars) parent highlight match
+let loaded_matchparen = 1
