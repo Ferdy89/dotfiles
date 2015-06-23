@@ -84,5 +84,10 @@ set mouse=a
 
 set clipboard=unnamed
 
-" Disable parenthesis (and similars) parent highlight match
+" Disable parenthesis (and similars) parent highlight match for improved
+" performance
 let loaded_matchparen = 1
+
+" All swap and backup files out of working directory
+set directory=~/.vim/tmp
+set backupdir=~/.vim/tmp
