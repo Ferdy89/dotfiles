@@ -27,6 +27,8 @@ Bundle 'ag.vim'
 Bundle 'godlygeek/tabular'
 Bundle 'tpope/vim-endwise'
 Bundle 'msanders/snipmate.vim'
+Bundle 'airblade/vim-gitgutter'
+Bundle 'scrooloose/syntastic'
 
 " Airline
 set laststatus=2 " Displays all the time
@@ -91,3 +93,6 @@ let loaded_matchparen = 1
 " All swap and backup files out of working directory
 set directory=~/.vim/tmp
 set backupdir=~/.vim/tmp
+
+" Copy filename into clipboard
+noremap <silent> <C-x> :let @+ = expand("%") <CR>
