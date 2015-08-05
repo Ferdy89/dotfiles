@@ -73,8 +73,13 @@ set scrolloff=10  " keep 10 lines above and below position
 let g:ctrlp_user_command = ['.git/', 'cd %s && git ls-files . -oc --exclude-standard']
 set wildignore+=*/tmp/*,*/node_modules/*,*/log/*,*/vendor/*
 
-" NERDTree mapping
-map <C-m> :NERDTreeFind<CR>
+" NERDTree customization and configuration
+noremap <C-m> :NERDTreeFind<CR>
+" TODO: I want C-m to be open nerdtree in all, plus find current file OR close
+" all, including while within nerdtree
+let g:NERDTreeMapJumpNextSibling = '<Esc>'
+let g:NERDTreeMapJumpPrevSibling = '<Esc>'
+let g:nerdtree_tabs_open_on_console_startup = 1
 
 " My own custom mappings for tabs and panes
 map <C-j> <Esc>:tabprev<CR>
