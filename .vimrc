@@ -28,7 +28,8 @@ Bundle 'godlygeek/tabular'
 Bundle 'tpope/vim-endwise'
 Bundle 'msanders/snipmate.vim'
 Bundle 'airblade/vim-gitgutter'
-Bundle 'scrooloose/syntastic'
+Bundle 'jistr/vim-nerdtree-tabs'
+Bundle 'Xuyuanp/nerdtree-git-plugin'
 
 " Airline
 set laststatus=2 " Displays all the time
