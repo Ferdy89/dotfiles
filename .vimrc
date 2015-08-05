@@ -82,10 +82,11 @@ let g:NERDTreeMapJumpPrevSibling = '<Esc>'
 let g:nerdtree_tabs_open_on_console_startup = 1
 
 " My own custom mappings for tabs and panes
-map <C-j> <Esc>:tabprev<CR>
-map <C-k> <Esc>:tabnext<CR>
-map <C-e> <C-w><C-w>
-map <C-u> <Esc>:Gblame<CR>
+noremap <C-j>     <Esc>:tabprev<CR>
+noremap <C-k>     <Esc>:tabnext<CR>
+noremap <C-e>     <C-w><C-w>
+noremap <C-u>     <Esc>:Gblame<CR>
+noremap <Leader>t <Esc>:tabclose<CR>
 
 " Allow mouse manipulation
 set mouse=a
