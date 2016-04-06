@@ -26,10 +26,8 @@ Bundle 'scrooloose/nerdtree'
 Bundle 'ag.vim'
 Bundle 'godlygeek/tabular'
 Bundle 'tpope/vim-endwise'
-Bundle 'msanders/snipmate.vim'
 Bundle 'airblade/vim-gitgutter'
 Bundle 'jistr/vim-nerdtree-tabs'
-Bundle 'Xuyuanp/nerdtree-git-plugin'
 
 " Airline
 set laststatus=2 " Displays all the time
@@ -79,14 +77,12 @@ noremap <C-m> :NERDTreeFind<CR>
 " all, including while within nerdtree
 let g:NERDTreeMapJumpNextSibling = '<Esc>'
 let g:NERDTreeMapJumpPrevSibling = '<Esc>'
-let g:nerdtree_tabs_open_on_console_startup = 1
 
 " My own custom mappings for tabs and panes
-noremap <C-j>     <Esc>:tabprev<CR>
-noremap <C-k>     <Esc>:tabnext<CR>
-noremap <C-e>     <C-w><C-w>
-noremap <C-u>     <Esc>:Gblame<CR>
-noremap <Leader>t <Esc>:tabclose<CR>
+noremap <C-j>  gT
+noremap <C-k>  gt
+noremap <C-e>  <C-w><C-w>
+noremap <C-u>  :Gblame<CR>
 
 " Allow mouse manipulation
 set mouse=a
@@ -132,3 +128,8 @@ function! DoPrettyXML()
   exe "set ft=" . l:origft
 endfunction
 command! PrettyXML call DoPrettyXML()
+
+abbr pry require 'pry'; binding.pry<Esc>
+
+" Fix for mac's crontab
+set backupskip=/tmp/*,/private/tmp/*
