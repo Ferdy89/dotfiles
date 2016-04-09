@@ -112,5 +112,6 @@ command! PrettyXML call DoPrettyXML()
 
 abbr pry require 'pry'; binding.pry<Esc>
 
-" Fix for mac's crontab
-set backupskip=/tmp/*,/private/tmp/*
+set backupdir=~/.vim/.backup//
+set directory=~/.vim/.swp//
+set undodir=~/.vim/.undo//
