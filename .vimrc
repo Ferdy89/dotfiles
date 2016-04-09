@@ -7,27 +7,8 @@ filetype off
 " Set behavior of the backspace to remove after beginning of line
 set backspace=2
 
-" ========================================================================
-" Vundle stuff
-" ========================================================================
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
-
-" Let Vundle manage Vundle (required)!
-Bundle 'gmarik/vundle'
-
-" My bundles
-Bundle 'kien/ctrlp.vim'
-Bundle 'kchmck/vim-coffee-script'
-Bundle 'tpope/vim-rails'
-Bundle 'bling/vim-airline'
-Bundle 'tpope/vim-fugitive'
-Bundle 'scrooloose/nerdtree'
-Bundle 'ag.vim'
-Bundle 'godlygeek/tabular'
-Bundle 'tpope/vim-endwise'
-Bundle 'airblade/vim-gitgutter'
-Bundle 'jistr/vim-nerdtree-tabs'
+" Set up Pathogen
+execute pathogen#infect()
 
 " Airline
 set laststatus=2 " Displays all the time
