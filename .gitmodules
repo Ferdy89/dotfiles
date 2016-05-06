@@ -31,3 +31,9 @@
 [submodule "vim-rails"]
   path = .vim/bundle/vim-rails
   url  = https://github.com/tpope/vim-rails
+[submodule ".vim/bundle/vim-airline-themes"]
+	path = .vim/bundle/vim-airline-themes
+	url = https://github.com/vim-airline/vim-airline-themes.git
+[submodule ".vim/bundle/vim-elixir"]
+	path = .vim/bundle/vim-elixir
+	url = https://github.com/elixir-lang/vim-elixir.git
