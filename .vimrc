@@ -12,6 +12,7 @@ execute pathogen#infect()
 
 " Airline
 set laststatus=2 " Displays all the time
+let g:airline_extensions = []
 
 syntax on                 " Enable syntax highlighting
 syntax enable
