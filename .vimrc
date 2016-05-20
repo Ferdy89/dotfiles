@@ -75,10 +75,6 @@ set clipboard=unnamed
 " performance
 let loaded_matchparen = 1
 
-" All swap and backup files out of working directory
-set directory=~/.vim/tmp
-set backupdir=~/.vim/tmp
-
 " Copy filename into clipboard
 noremap <silent> <C-x> :let @+ = expand("%") <CR>
 
@@ -116,3 +112,6 @@ abbr pry require 'pry'; binding.pry<Esc>
 set backupdir=~/.vim/.backup//
 set directory=~/.vim/.swp//
 set undodir=~/.vim/.undo//
+" This is for cron to work
+" http://vim.wikia.com/wiki/Editing_crontab
+au BufEnter /private/tmp/crontab.* setl backupcopy=yes
