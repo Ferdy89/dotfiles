@@ -115,3 +115,13 @@ set undodir=~/.vim/.undo//
 " This is for cron to work
 " http://vim.wikia.com/wiki/Editing_crontab
 au BufEnter /private/tmp/crontab.* setl backupcopy=yes
+
+" Hook up the ack plugin to the Silver Searcher
+let g:ackprg = 'ag --vimgrep --smart-case'
+cnoreabbrev ag Ack
+cnoreabbrev aG Ack
+cnoreabbrev Ag Ack
+cnoreabbrev AG Ack
+
+" Auto delete trailing whitespaces
+autocmd BufWritePre * %s/\s\+$//e
