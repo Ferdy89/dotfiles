@@ -7,9 +7,6 @@
 [submodule "tabular"]
   path = .vim/bundle/tabular
   url  = https://github.com/godlygeek/tabular
-[submodule "vim-airline"]
-  path = .vim/bundle/vim-airline
-  url  = https://github.com/vim-airline/vim-airline
 [submodule "vim-coffee-script"]
   path = .vim/bundle/vim-coffee-script
   url  = https://github.com/kchmck/vim-coffee-script
@@ -28,12 +25,15 @@
 [submodule "vim-rails"]
   path = .vim/bundle/vim-rails
   url  = https://github.com/tpope/vim-rails
-[submodule ".vim/bundle/vim-airline-themes"]
-	path = .vim/bundle/vim-airline-themes
-	url = https://github.com/vim-airline/vim-airline-themes.git
 [submodule ".vim/bundle/vim-elixir"]
 	path = .vim/bundle/vim-elixir
 	url = https://github.com/elixir-lang/vim-elixir.git
 [submodule ".vim/bundle/ack.vim"]
 	path = .vim/bundle/ack.vim
 	url = https://github.com/mileszs/ack.vim
+[submodule ".vim/bundle/vim-airline"]
+	path = .vim/bundle/vim-airline
+	url = https://github.com/vim-airline/vim-airline
+[submodule ".vim/bundle/vim-airline-themes"]
+	path = .vim/bundle/vim-airline-themes
+	url = https://github.com/vim-airline/vim-airline-themes
