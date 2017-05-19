@@ -42,6 +42,9 @@ set incsearch
 set ignorecase
 set smartcase
 
+set cursorline    " highlight current line
+set cursorcolumn  " highlight current column
+
 set nostartofline " restart at last cursor position - YAY!
 set scrolloff=10  " keep 10 lines above and below position
 
