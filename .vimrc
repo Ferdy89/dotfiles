@@ -69,7 +69,7 @@ noremap <C-u>  :Gblame<CR>
 " Allow mouse manipulation
 set mouse=a
 
-set clipboard=unnamedplus
+set clipboard=unnamed
 
 " Disable parenthesis (and similars) parent highlight match for improved
 " performance
