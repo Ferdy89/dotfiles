@@ -49,6 +49,9 @@ set scrolloff=10  " keep 10 lines above and below position
 :highlight ExtraWhitespace ctermbg=red guibg=red
 :match ExtraWhitespace /\s\+$/
 
+" Auto delete trailing whitespaces
+autocmd BufWritePre * %s/\s\+$//e
+
 " CtrlP
 let g:ctrlp_user_command = ['.git/', 'cd %s && git ls-files . -oc --exclude-standard']
 set wildignore+=*/tmp/*,*/node_modules/*,*/log/*,*/vendor/*
@@ -78,35 +81,6 @@ let loaded_matchparen = 1
 " Copy filename into clipboard
 noremap <silent> <C-x> :let @+ = expand("%") <CR>
 
-function! DoPrettyXML()
-  " save the filetype so we can restore it later
-  let l:origft = &ft
-  set ft=
-  " delete the xml header if it exists. This will
-  " permit us to surround the document with fake tags
-  " without creating invalid xml.
-  1s/<?xml .*?>//e
-  " insert fake tags around the entire document.
-  " This will permit us to pretty-format excerpts of
-  " XML that may contain multiple top-level elements.
-  0put ='<PrettyXML>'
-  $put ='</PrettyXML>'
-  silent %!xmllint --format -
-  " xmllint will insert an <?xml?> header. it's easy enough to delete
-  " if you don't want it.
-  " delete the fake tags
-  2d
-  $d
-  " restore the 'normal' indentation, which is one extra level
-  " too deep due to the extra tags we wrapped around the document.
-  silent %<
-  " back to home
-  1
-  " restore the filetype
-  exe "set ft=" . l:origft
-endfunction
-command! PrettyXML call DoPrettyXML()
-
 abbr pry require 'pry'; binding.pry<Esc>
 
 set backupdir=~/.vim/.backup//
@@ -123,5 +97,16 @@ cnoreabbrev aG Ack
 cnoreabbrev Ag Ack
 cnoreabbrev AG Ack
 
-" Auto delete trailing whitespaces
-autocmd BufWritePre * %s/\s\+$//e
+" Syntastic recommended settings
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
+" Rust auto formatting
+let g:syntastic_rust_checkers = ['rustc'] " Fix for https://github.com/rust-lang/rust.vim/issues/118
+let g:rustfmt_autosave = 1

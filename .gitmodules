@@ -4,9 +4,6 @@
 [submodule "nerdtree"]
   path = .vim/bundle/nerdtree
   url  = https://github.com/scrooloose/nerdtree
-[submodule "tabular"]
-  path = .vim/bundle/tabular
-  url  = https://github.com/godlygeek/tabular
 [submodule "vim-coffee-script"]
   path = .vim/bundle/vim-coffee-script
   url  = https://github.com/kchmck/vim-coffee-script
@@ -37,6 +34,9 @@
 [submodule ".vim/bundle/vim-airline-themes"]
 	path = .vim/bundle/vim-airline-themes
 	url = https://github.com/vim-airline/vim-airline-themes
-[submodule ".vim/bundle/fzf.vim"]
-	path = .vim/bundle/fzf.vim
-	url = https://github.com/junegunn/fzf.vim.git
+[submodule ".vim/bundle/rust.vim"]
+	path = .vim/bundle/rust.vim
+	url = https://github.com/rust-lang/rust.vim.git
+[submodule ".vim/bundle/syntastic"]
+	path = .vim/bundle/syntastic
+	url = https://github.com/vim-syntastic/syntastic.git
