@@ -82,6 +82,7 @@ let loaded_matchparen = 1
 noremap <silent> <C-x> :let @+ = expand("%") <CR>
 
 abbr pry require 'pry'; binding.pry<Esc>
+abbr frozes # frozen_string_literal: true<Esc>
 
 set backupdir=~/.vim/.backup//
 set directory=~/.vim/.swp//
@@ -97,16 +98,8 @@ cnoreabbrev aG Ack
 cnoreabbrev Ag Ack
 cnoreabbrev AG Ack
 
-" Syntastic recommended settings
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
+" Fugitive's status line
+set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
 
 " Rust auto formatting
-let g:syntastic_rust_checkers = ['rustc'] " Fix for https://github.com/rust-lang/rust.vim/issues/118
 let g:rustfmt_autosave = 1
