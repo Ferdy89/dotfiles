@@ -4,19 +4,11 @@ set nocompatible
 " Disable detection of file type
 filetype off
 
-" Set behavior of the backspace to remove after beginning of line
-set backspace=2
-
 " Set up Pathogen
 execute pathogen#infect()
 
 " Airline
-set laststatus=2 " Displays all the time
 let g:airline_extensions = []
-
-syntax on                 " Enable syntax highlighting
-syntax enable
-filetype plugin indent on " Enable filetype-specific indenting and plugins
 
 " Solarized theme
 " Not sure why, but if not, vim solarized does not work properly with terminal solarized
@@ -28,7 +20,6 @@ colorscheme solarized
 set tabstop=2
 set shiftwidth=2
 set expandtab
-set autoindent
 
 autocmd FileType ruby,eruby let g:rubycomplete_buffer_loading = 1
 autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
@@ -38,12 +29,9 @@ set number
 set colorcolumn=80
 highlight ColorColumn ctermbg=4
 set hlsearch
-set incsearch
 set ignorecase
 set smartcase
-
-set nostartofline " restart at last cursor position - YAY!
-set scrolloff=10  " keep 10 lines above and below position
+set spell spelllang=en_us
 
 " Show trailing whitespace:
 :highlight ExtraWhitespace ctermbg=red guibg=red
@@ -101,5 +89,11 @@ cnoreabbrev AG Ack
 " Fugitive's status line
 set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
 
+" vim-ruby config
+let g:ruby_indent_assignment_style = 'variable'
+
 " Rust auto formatting
 let g:rustfmt_autosave = 1
+
+let g:ale_sign_column_always = 1
+let g:ale_lint_on_text_changed = 'never'
