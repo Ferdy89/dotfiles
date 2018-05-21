@@ -10,12 +10,6 @@ execute pathogen#infect()
 " Airline
 let g:airline_extensions = []
 
-" Solarized theme
-" Not sure why, but if not, vim solarized does not work properly with terminal solarized
-set t_Co=256
-set background=dark
-colorscheme solarized
-
 " Tabs
 set tabstop=2
 set shiftwidth=2
