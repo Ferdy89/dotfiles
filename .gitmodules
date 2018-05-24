@@ -13,9 +13,6 @@
 [submodule "vim-gitgutter"]
   path = .vim/bundle/vim-gitgutter
   url  = https://github.com/airblade/vim-gitgutter
-[submodule "vim-nerdtree-tabs"]
-  path = .vim/bundle/vim-nerdtree-tabs
-  url  = https://github.com/jistr/vim-nerdtree-tabs
 [submodule "vim-rails"]
   path = .vim/bundle/vim-rails
   url  = https://github.com/tpope/vim-rails
@@ -43,3 +40,6 @@
 [submodule ".vim/bundle/vim-polyglot"]
 	path = .vim/bundle/vim-polyglot
 	url = https://github.com/sheerun/vim-polyglot
+[submodule ".vim/bundle/vim-rhubarb"]
+	path = .vim/bundle/vim-rhubarb
+	url = https://github.com/tpope/vim-rhubarb

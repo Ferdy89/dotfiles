@@ -10,6 +10,11 @@ execute pathogen#infect()
 " Airline
 let g:airline_extensions = []
 
+" Solarized theme
+syntax enable
+set background=dark
+colorscheme solarized
+
 " Tabs
 set tabstop=2
 set shiftwidth=2
