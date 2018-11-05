@@ -43,3 +43,9 @@
 [submodule ".vim/bundle/vim-rhubarb"]
 	path = .vim/bundle/vim-rhubarb
 	url = https://github.com/tpope/vim-rhubarb
+[submodule ".vim/bundle/vim-markdown-folding"]
+	path = .vim/bundle/vim-markdown-folding
+	url = https://github.com/nelstrom/vim-markdown-folding
+[submodule ".vim/bundle/cheat.sh-vim"]
+	path = .vim/bundle/cheat.sh-vim
+	url = https://github.com/dbeniamine/cheat.sh-vim

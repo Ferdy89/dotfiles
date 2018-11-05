@@ -26,7 +26,7 @@ autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
 
 set number
 set colorcolumn=80
-highlight ColorColumn ctermbg=4
+highlight ColorColumn ctermbg=24
 set hlsearch
 set ignorecase
 set smartcase
@@ -68,6 +68,9 @@ let loaded_matchparen = 1
 " Copy filename into clipboard
 noremap <silent> <C-x> :let @+ = expand("%") <CR>
 
+" Refresh Ctags - Not working properly yet :(
+noremap <silent> <C-t> :!ctags -e --exclude=.git --exclude='*.log' -R * `bundle show --paths` <CR><CR>
+
 abbr pry require 'pry'; binding.pry<Esc>
 abbr frozes # frozen_string_literal: true<Esc>
 
@@ -80,10 +83,7 @@ au BufEnter /private/tmp/crontab.* setl backupcopy=yes
 
 " Hook up the ack plugin to the Silver Searcher
 let g:ackprg = 'ag --vimgrep --smart-case'
-cnoreabbrev ag Ack
-cnoreabbrev aG Ack
-cnoreabbrev Ag Ack
-cnoreabbrev AG Ack
+cnoreabbrev ag LAck
 
 " Fugitive's status line
 set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
@@ -94,5 +94,11 @@ let g:ruby_indent_assignment_style = 'variable'
 " Rust auto formatting
 let g:rustfmt_autosave = 1
 
+let g:ale_completion_enabled = 1
 let g:ale_sign_column_always = 1
 let g:ale_lint_on_text_changed = 'never'
+let g:ale_set_loclist = 0
+let g:ale_fix_on_save = 1
+
+let g:markdown_fold_style = 'nested'
+autocmd Syntax markdown normal zR
