@@ -94,7 +94,6 @@ let g:ruby_indent_assignment_style = 'variable'
 " Rust auto formatting
 let g:rustfmt_autosave = 1
 
-let g:ale_completion_enabled = 1
 let g:ale_sign_column_always = 1
 let g:ale_lint_on_text_changed = 'never'
 let g:ale_set_loclist = 0
