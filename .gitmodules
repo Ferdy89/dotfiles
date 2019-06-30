@@ -1,51 +1,48 @@
-[submodule "ctrlp.vim"]
-  path = .vim/bundle/ctrlp.vim
-  url  = https://github.com/ctrlpvim/ctrlp.vim
-[submodule "nerdtree"]
-  path = .vim/bundle/nerdtree
-  url  = https://github.com/scrooloose/nerdtree
-[submodule "vim-endwise"]
-  path = .vim/bundle/vim-endwise
-  url  = https://github.com/tpope/vim-endwise
-[submodule "vim-fugitive"]
-  path = .vim/bundle/vim-fugitive
-  url  = https://github.com/tpope/vim-fugitive
-[submodule "vim-gitgutter"]
-  path = .vim/bundle/vim-gitgutter
-  url  = https://github.com/airblade/vim-gitgutter
-[submodule "vim-rails"]
-  path = .vim/bundle/vim-rails
-  url  = https://github.com/tpope/vim-rails
-[submodule ".vim/bundle/ack.vim"]
-	path = .vim/bundle/ack.vim
+[submodule "vim/.vim/bundle/ctrlp.vim"]
+	path = vim/.vim/bundle/ctrlp.vim
+	url = https://github.com/ctrlpvim/ctrlp.vim
+[submodule "vim/.vim/bundle/nerdtree"]
+	path = vim/.vim/bundle/nerdtree
+	url = https://github.com/scrooloose/nerdtree
+[submodule "vim/.vim/bundle/vim-endwise"]
+	path = vim/.vim/bundle/vim-endwise
+	url = https://github.com/tpope/vim-endwise
+[submodule "vim/.vim/bundle/vim-fugitive"]
+	path = vim/.vim/bundle/vim-fugitive
+	url = https://github.com/tpope/vim-fugitive
+[submodule "vim/.vim/bundle/vim-gitgutter"]
+	path = vim/.vim/bundle/vim-gitgutter
+	url = https://github.com/airblade/vim-gitgutter
+[submodule "vim/.vim/bundle/vim-rails"]
+	path = vim/.vim/bundle/vim-rails
+	url = https://github.com/tpope/vim-rails
+[submodule "vim/.vim/bundle/ack.vim"]
+	path = vim/.vim/bundle/ack.vim
 	url = https://github.com/mileszs/ack.vim
-[submodule ".vim/bundle/vim-airline"]
-	path = .vim/bundle/vim-airline
+[submodule "vim/.vim/bundle/vim-airline"]
+	path = vim/.vim/bundle/vim-airline
 	url = https://github.com/vim-airline/vim-airline
-[submodule ".vim/bundle/vim-airline-themes"]
-	path = .vim/bundle/vim-airline-themes
+[submodule "vim/.vim/bundle/vim-airline-themes"]
+	path = vim/.vim/bundle/vim-airline-themes
 	url = https://github.com/vim-airline/vim-airline-themes
-[submodule ".vim/bundle/Align"]
-	path = .vim/bundle/Align
+[submodule "vim/.vim/bundle/Align"]
+	path = vim/.vim/bundle/Align
 	url = https://github.com/vim-scripts/Align
-[submodule ".vim/bundle/ale"]
-	path = .vim/bundle/ale
-	url = https://github.com/w0rp/ale.git
-[submodule ".vim/bundle/vim-dispatch"]
-	path = .vim/bundle/vim-dispatch
-	url = https://github.com/tpope/vim-dispatch
-[submodule ".vim/bundle/vim-sensible"]
-	path = .vim/bundle/vim-sensible
+[submodule "vim/.vim/bundle/ale"]
+	path = vim/.vim/bundle/ale
+	url = https://github.com/w0rp/ale
+[submodule "vim/.vim/bundle/vim-sensible"]
+	path = vim/.vim/bundle/vim-sensible
 	url = https://github.com/tpope/vim-sensible
-[submodule ".vim/bundle/vim-polyglot"]
-	path = .vim/bundle/vim-polyglot
+[submodule "vim/.vim/bundle/vim-polyglot"]
+	path = vim/.vim/bundle/vim-polyglot
 	url = https://github.com/sheerun/vim-polyglot
-[submodule ".vim/bundle/vim-rhubarb"]
-	path = .vim/bundle/vim-rhubarb
+[submodule "vim/.vim/bundle/vim-rhubarb"]
+	path = vim/.vim/bundle/vim-rhubarb
 	url = https://github.com/tpope/vim-rhubarb
-[submodule ".vim/bundle/vim-markdown-folding"]
-	path = .vim/bundle/vim-markdown-folding
+[submodule "vim/.vim/bundle/vim-markdown-folding"]
+	path = vim/.vim/bundle/vim-markdown-folding
 	url = https://github.com/nelstrom/vim-markdown-folding
-[submodule ".vim/bundle/cheat.sh-vim"]
-	path = .vim/bundle/cheat.sh-vim
+[submodule "vim/.vim/bundle/cheat.sh-vim"]
+	path = vim/.vim/bundle/cheat.sh-vim
 	url = https://github.com/dbeniamine/cheat.sh-vim

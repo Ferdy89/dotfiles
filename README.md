@@ -1,13 +1,16 @@
 # Ferdy89 Dotfiles
 
-Awesome for Tmux & Vim combo on Mac OS or Linux
+Awesome for Oh My Zsh, Tmux & Vim combo on Mac OS or Linux
 
 ## Installation
 
 ```bash
-git clone --recursive https://github.com/Ferdy89/dotfiles.git
-cd dotfiles
-./install.sh
+git clone --recursive https://github.com/Ferdy89/dotfiles.git && cd dotfiles
+
+# Use GNU Stow to symlink each config set to the home directory
+stow vim
+stow tmux
+stow zsh
 ```
 
 ## Dependencies
@@ -39,7 +42,7 @@ These dotfiles use Pathogen. Use these commands to manage them.
 git submodule foreach git pull origin master
 
 # Add
-git submodule add <url_to_github_repo_from_plugin> .vim/bundle/<plugin_name>
+git submodule add <url_to_github_repo_from_plugin> vim/.vim/bundle/<plugin_name>
 
 # Remove
 ./remove-vim-plugin.sh <plugin_name>

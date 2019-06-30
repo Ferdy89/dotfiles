@@ -1,3 +1,7 @@
-.vim/.swp/*
-!.vim/.swp/.keep
-.vim/spell/
+vim/.vim/.swp/*
+!vim/.vim/.swp/.keep
+vim/.vim/spell/*
+!vim/.vim/spell/*.add
+vim/.vim/.netrwhist
+zsh/.oh-my-zsh/custom/this_machine/*
+!zsh/.oh-my-zsh/custom/this_machine/README
