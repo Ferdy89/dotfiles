@@ -4,14 +4,29 @@ set nocompatible
 " Disable detection of file type
 filetype off
 
-" Set up Pathogen
-execute pathogen#infect()
+call plug#begin()
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'scrooloose/nerdtree'
+Plug 'tpope/vim-endwise'
+Plug 'tpope/vim-fugitive'
+Plug 'airblade/vim-gitgutter'
+Plug 'tpope/vim-rails'
+Plug 'mileszs/ack.vim'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'vim-scripts/Align'
+Plug 'w0rp/ale'
+Plug 'tpope/vim-sensible'
+Plug 'sheerun/vim-polyglot'
+Plug 'tpope/vim-rhubarb'
+Plug 'nelstrom/vim-markdown-folding'
+Plug 'dbeniamine/cheat.sh-vim'
+call plug#end()
 
 " Airline
 let g:airline_extensions = []
 
 " Solarized theme
-syntax enable
 set background=dark
 colorscheme solarized
 

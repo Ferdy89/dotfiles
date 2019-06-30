@@ -5,7 +5,7 @@ Awesome for Oh My Zsh, Tmux & Vim combo on Mac OS or Linux
 ## Installation
 
 ```bash
-git clone --recursive https://github.com/Ferdy89/dotfiles.git && cd dotfiles
+git clone https://github.com/Ferdy89/dotfiles.git && cd dotfiles
 
 # Use GNU Stow to symlink each config set to the home directory
 stow vim
@@ -30,23 +30,6 @@ recommended for searching in Vim.
 * Vim abbreviations: 'pry' and 'frozes'
 * In tmux, use Leader | and Leader - to create vertical and horizontal splits
 * Control which nested tmux session is active with Shift-up and Shift-down
-
-## Maintenance
-
-### Vim plugins
-
-These dotfiles use Pathogen. Use these commands to manage them.
-
-```bash
-# Update
-git submodule foreach git pull origin master
-
-# Add
-git submodule add <url_to_github_repo_from_plugin> vim/.vim/bundle/<plugin_name>
-
-# Remove
-./remove-vim-plugin.sh <plugin_name>
-```
 
 ### Vim Ale plugins
 
