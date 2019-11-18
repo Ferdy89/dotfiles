@@ -6,8 +6,8 @@ let g:ctrlp_user_command = ['.git/', 'cd %s && git ls-files . -oc --exclude-stan
 set wildignore+=*/tmp/*,*/node_modules/*,*/log/*,*/vendor/*
 
 " NERDTree customization and configuration
-noremap <C-m> :NERDTreeFind<CR>
-" TODO: I want C-m to be open nerdtree in all, plus find current file OR close
+noremap <C-t> :NERDTreeFind<CR>
+" TODO: I want C-t to be open nerdtree in all, plus find current file OR close
 " all, including while within nerdtree
 let g:NERDTreeMapJumpNextSibling = '<Esc>'
 let g:NERDTreeMapJumpPrevSibling = '<Esc>'

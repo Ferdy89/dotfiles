@@ -152,13 +152,15 @@ bindsym $mod+r mode "resize"
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-        status_command i3status
+        status_command ~/bin/i3script.sh
 }
 
 # Keyboard mods
 exec xmodmap -e "clear lock" # disable caps lock switch
 exec xmodmap -e "keysym Caps_Lock = Escape" # set caps_lock as escape
 exec xset r rate 250 60
+exec setxkbmap -layout us,es
+exec setxkbmap -option 'grp:win_space_toggle'
 
 ### Invidia specifics ###
 
@@ -168,8 +170,17 @@ exec xrandr --output HDMI1 --auto --right-of eDP1
 # Pulse Audio controls
 bindsym $mod+Up exec --no-startup-id pactl set-sink-volume 0 +5% # increase sound volume
 bindsym $mod+Down exec --no-startup-id pactl set-sink-volume 0 -5% # decrease sound volume
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
+
+# Media player controls
+bindsym XF86AudioPlay exec playerctl play
+bindsym XF86AudioPause exec playerctl pause
+bindsym XF86AudioNext exec playerctl next
+bindsym XF86AudioPrev exec playerctl previous
 
 # Screen brightness controls
 bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
 bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightness
+
