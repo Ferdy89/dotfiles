@@ -9,6 +9,7 @@ filetype off
 
 call plug#begin()
 Plug 'airblade/vim-gitgutter'
+Plug 'altercation/vim-colors-solarized'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'dbeniamine/cheat.sh-vim'
 Plug 'mileszs/ack.vim'
