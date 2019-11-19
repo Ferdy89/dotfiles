@@ -158,16 +158,12 @@ bar {
         status_command ~/bin/i3script.sh
 }
 
-exec ~/bin/i3keyboard.sh
 exec ~/bin/numlockon.sh
+exec ~/bin/i3display.sh
+exec ~/bin/i3keyboard.sh
 
 # Set nice background color
 exec xsetroot -solid "#333333"
-
-### Invidia specifics ###
-
-# Second monitor
-exec xrandr --output HDMI1 --auto --right-of eDP1
 
 # Pulse Audio controls
 bindsym $mod+Up exec --no-startup-id pactl set-sink-volume 0 +5% # increase sound volume
@@ -185,4 +181,3 @@ bindsym XF86AudioPrev exec playerctl previous
 # Screen brightness controls
 bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
 bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightness
-
