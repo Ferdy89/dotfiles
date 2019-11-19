@@ -15,3 +15,6 @@ vim/.vim/local/
 
 zsh/.oh-my-zsh/custom/this_machine/*
 !zsh/.oh-my-zsh/custom/this_machine/README
+
+i3/.config/i3/i3display-override.sh
+i3/.config/i3/i3lock-override.sh

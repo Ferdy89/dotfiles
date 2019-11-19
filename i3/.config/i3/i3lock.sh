@@ -1,9 +1,9 @@
 #!/bin/bash
 
-OVERRIDE="$HOME/bin/i3lock-override.sh"
+OVERRIDE="$HOME/.config/i3/i3lock-override.sh"
 
 # Allows a system to use its own custom lock script simply by having it live on
-# a ~/bin/i3lock-override.sh executable file
+# a ~/.config/i3/i3lock-override.sh executable file
 if [ -f "$OVERRIDE" ]; then
   $OVERRIDE
 else
