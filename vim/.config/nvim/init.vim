@@ -4,16 +4,20 @@ let &packpath = &runtimepath
 " No compatibility with vi, unleash the power
 set nocompatible
 
-" Disable detection of file type
-filetype off
-
 call plug#begin()
+
+if filereadable($HOME . "/.config/nvim/config/machine-plugins.vim")
+  source $HOME/.config/nvim/config/machine-plugins.vim
+endif
+
+Plug 'Raimondi/delimitMate'
 Plug 'airblade/vim-gitgutter'
 Plug 'altercation/vim-colors-solarized'
+Plug 'alvan/vim-closetag'
 Plug 'ctrlpvim/ctrlp.vim'
-Plug 'dbeniamine/cheat.sh-vim'
 Plug 'mileszs/ack.vim'
 Plug 'nelstrom/vim-markdown-folding'
+Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree'
 Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-endwise'
@@ -24,12 +28,20 @@ Plug 'tpope/vim-sensible'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'vim-scripts/Align'
+Plug 'vim-scripts/vcscommand.vim'
 Plug 'w0rp/ale'
 call plug#end()
 
 source $HOME/.config/nvim/config/keys.vim
 source $HOME/.config/nvim/config/plugins.vim
 source $HOME/.config/nvim/config/theme.vim
+
+if filereadable($HOME . "/.config/nvim/config/machine.vim")
+  source $HOME/.config/nvim/config/machine.vim
+endif
+
+filetype plugin indent on
+syntax on
 
 " Tabs
 set tabstop=2
@@ -70,7 +82,3 @@ let g:rustfmt_autosave = 1
 
 let g:markdown_fold_style = 'nested'
 autocmd Syntax markdown normal zR
-
-if filereadable($HOME . "/.config/nvim/config/machine.vim")
-  source $HOME/.config/nvim/config/machine.vim
-endif

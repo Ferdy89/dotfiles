@@ -9,8 +9,9 @@ set wildignore+=*/tmp/*,*/node_modules/*,*/log/*,*/vendor/*
 noremap <C-t> :NERDTreeFind<CR>
 " TODO: I want C-t to be open nerdtree in all, plus find current file OR close
 " all, including while within nerdtree
-let g:NERDTreeMapJumpNextSibling = '<Esc>'
-let g:NERDTreeMapJumpPrevSibling = '<Esc>'
+let g:NERDTreeMapJumpNextSibling=""
+let g:NERDTreeMapJumpPrevSibling=""
+let g:NERDTreeWinSize=50
 
 " Hook up the ack plugin to the Silver Searcher
 let g:ackprg = 'ag --vimgrep --smart-case'
@@ -29,3 +30,6 @@ let g:ale_sign_column_always = 1
 let g:ale_lint_on_text_changed = 'never'
 let g:ale_set_loclist = 0
 let g:ale_fix_on_save = 1
+
+let delimitMate_expand_cr = 1
+let delimitMate_jump_expansion = 1

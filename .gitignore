@@ -8,6 +8,7 @@ vim/.vim/spell/*
 vim/.vim/.netrwhist
 
 # Used to store custom config options for this particular machine
+vim/.config/nvim/config/machine-plugins.vim
 vim/.config/nvim/config/machine.vim
 
 # Used to store custom VIM plugins or similar
