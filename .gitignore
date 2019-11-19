@@ -1,10 +1,17 @@
 vim/.local/share/nvim/shada/
+vim/.vim/cache/
 vim/.vim/plugged/
 vim/.vim/.swp/*
 !vim/.vim/.swp/.keep
 vim/.vim/spell/*
 !vim/.vim/spell/*.add
 vim/.vim/.netrwhist
+
+# Used to store custom config options for this particular machine
+vim/.config/nvim/config/machine.vim
+
+# Used to store custom VIM plugins or similar
+vim/.vim/local/
 
 zsh/.oh-my-zsh/custom/this_machine/*
 !zsh/.oh-my-zsh/custom/this_machine/README

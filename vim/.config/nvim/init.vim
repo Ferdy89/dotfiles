@@ -69,3 +69,7 @@ let g:rustfmt_autosave = 1
 
 let g:markdown_fold_style = 'nested'
 autocmd Syntax markdown normal zR
+
+if filereadable($HOME . "/.config/nvim/config/machine.vim")
+  source $HOME/.config/nvim/config/machine.vim
+endif
