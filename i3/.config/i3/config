@@ -158,12 +158,11 @@ bar {
         status_command ~/bin/i3script.sh
 }
 
-# Keyboard mods
-exec xmodmap -e "clear lock" # disable caps lock switch
-exec xmodmap -e "keysym Caps_Lock = Escape" # set caps_lock as escape
-exec xset r rate 250 60
-exec setxkbmap -layout us,es
-exec setxkbmap -option 'grp:win_space_toggle'
+exec ~/bin/i3keyboard.sh
+exec ~/bin/numlockon.sh
+
+# Set nice background color
+exec xsetroot -solid "#333333"
 
 ### Invidia specifics ###
 
