@@ -8,10 +8,6 @@ noremap <C-u>  :Gblame<CR>
 noremap <silent> <C-x> :let @+ = expand("%") <CR>
 
 nnoremap <Leader>q :bwipeout<CR>
-nnoremap <Leader>w :write<CR>
-
-abbr pry require 'pry'; binding.pry<Esc>
-abbr frozes # frozen_string_literal: true<Esc>
 
 " https://stackoverflow.com/a/7321131
 function! DeleteInactiveBufs()

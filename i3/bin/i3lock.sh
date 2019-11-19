@@ -1,13 +1,21 @@
 #!/bin/bash
 
-icon="$HOME/.config/i3/lock.png"
-img="$HOME/.cache/i3lock.png"
+OVERRIDE="$HOME/bin/i3lock-override.sh"
 
-# Take a screenshot for our background
-scrot $img
-# Pixelate the background
-convert $img -scale 10% -scale 1000% $img
-# Add the lock-icon
-convert $img $icon -gravity center -composite $img
-# Finally run i3lock itself
-i3lock -e -i $img
+# Allows a system to use its own custom lock script simply by having it live on
+# a ~/bin/i3lock-override.sh executable file
+if [ -f "$OVERRIDE" ]; then
+  $OVERRIDE
+else
+  ICON="$HOME/.config/i3/lock.png"
+  IMG="$HOME/.cache/i3lock.png"
+
+  # Take a screenshot for our background
+  scrot $IMG
+  # Pixelate the background
+  convert $IMG -scale 10% -scale 1000% $IMG
+  # Add the lock-icon
+  convert $IMG $ICON -gravity center -composite $IMG
+  # Finally run i3lock itself
+  i3lock -e -i $IMG
+fi
