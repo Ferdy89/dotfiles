@@ -4,6 +4,9 @@ let &packpath = &runtimepath
 " No compatibility with vi, unleash the power
 set nocompatible
 
+filetype plugin indent on
+syntax on
+
 call plug#begin()
 
 if filereadable($HOME . "/.config/nvim/config/machine-plugins.vim")
@@ -39,9 +42,6 @@ source $HOME/.config/nvim/config/theme.vim
 if filereadable($HOME . "/.config/nvim/config/machine.vim")
   source $HOME/.config/nvim/config/machine.vim
 endif
-
-filetype plugin indent on
-syntax on
 
 " Tabs
 set tabstop=2
@@ -82,3 +82,15 @@ let g:rustfmt_autosave = 1
 
 let g:markdown_fold_style = 'nested'
 autocmd Syntax markdown normal zR
+
+" copy to attached terminal using the yank(1) script:
+" https://github.com/sunaku/home/blob/master/bin/yank
+function! Yank(text) abort
+  let escape = system('yank', a:text)
+  if v:shell_error
+    echoerr escape
+  else
+    call writefile([escape], '/dev/tty', 'b')
+  endif
+endfunction
+noremap <silent> <Leader>y y:<C-U>call Yank(@0)<CR>

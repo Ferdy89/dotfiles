@@ -1,6 +1,7 @@
 " My own custom mappings for tabs and panes
-noremap <C-j>  gT
-noremap <C-k>  gt
+noremap  <C-j>     :tabprevious<CR>
+noremap  <C-k>     :tabnext<CR>
+
 noremap <C-e>  <C-w><C-w>
 noremap <C-u>  :Gblame<CR>
 
