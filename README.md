@@ -30,7 +30,20 @@ The `bin` directory contains a set of executable scripts that the other tools
 can use. The `zsh` configuration already adds this directory to the `PATH`.
 Each script should be self-documented.
 
-### Opinionated features
+## Neovim
+
+### Solarized theme
+
+The Dark Solarized theme is installed from
+https://github.com/altercation/vim-colors-solarized and directly copied to the
+`~/.vim/colors/` per the installation instructions.
+
+It should work beautifully when combined with the Dark Solarized theme in the
+Ubuntu terminal:
+
+![Ubuntu terminal theme preferences](img/ubuntu-terminal-theme.png)
+
+## Opinionated features
 
 * Move across tmux windows with C-h and C-l
 * Move across vim tabs with C-j and C-k
