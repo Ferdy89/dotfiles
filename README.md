@@ -51,3 +51,16 @@ Ubuntu terminal:
 * In vim, C-p fuzzy searches file names, :Ag searches file contents
 * In vim, C-m shows the file tree structure, C-u shows git blame sidebar
 * In tmux, use Leader | and Leader - to create vertical and horizontal splits
+
+## TODOs
+
+* Add my VSCode config
+* Add instructions, installation scripts, and `zsh` files for
+  * Ruby (`chruby` + `ruby-install`)
+  * NodeJS (`NVM`)
+  * Python (`pyenv`)
+* Revitalize my Vim config files
+  * Remove plugins
+  * Remove unused stuff
+  * Document as much as possible
+* Remove i3 (or reword the README to explain I'm not using it anymore)
