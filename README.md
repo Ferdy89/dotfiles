@@ -1,25 +1,34 @@
 # Ferdy89 Dotfiles
 
-Awesome for i3, Oh My Zsh, Tmux & Vim combo on Mac OS or Linux
+Awesome for i3, Oh My Zsh, Tmux & Vim combo on Linux
 
 ## Installation
 
 ```bash
 git clone https://github.com/Ferdy89/dotfiles.git && cd dotfiles
 
-# Use GNU Stow to symlink each config set to the home directory
-stow i3
+sudo apt install stow
+
+stow zsh
+stow bin
 stow tmux
 stow vim
-stow zsh
+stow i3
 ```
 
 ## Dependencies
 
 i3, Neovim, and Tmux are necessary. These dotfiles are optimized to be used
-with zsh and the oh-my-zsh package. [The Silver
-Searcher](https://github.com/ggreer/the_silver_searcher#installing) is
-recommended for searching in Vim.
+with zsh and the oh-my-zsh package.
+
+[The Silver Searcher](https://github.com/ggreer/the_silver_searcher#installing)
+is recommended for searching in Vim.
+
+## `bin` directory
+
+The `bin` directory contains a set of executable scripts that the other tools
+can use. The `zsh` configuration already adds this directory to the `PATH`.
+Each script should be self-documented.
 
 ### Opinionated features
 
@@ -29,7 +38,3 @@ recommended for searching in Vim.
 * In vim, C-p fuzzy searches file names, :Ag searches file contents
 * In vim, C-m shows the file tree structure, C-u shows git blame sidebar
 * In tmux, use Leader | and Leader - to create vertical and horizontal splits
-
-### Vim Ale plugins
-
-[Full list of supported tools](https://github.com/w0rp/ale#1-supported-languages-and-tools)
