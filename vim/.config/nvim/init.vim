@@ -15,7 +15,6 @@ endif
 
 Plug 'Raimondi/delimitMate'
 Plug 'airblade/vim-gitgutter'
-Plug 'altercation/vim-colors-solarized'
 Plug 'alvan/vim-closetag'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'mileszs/ack.vim'
