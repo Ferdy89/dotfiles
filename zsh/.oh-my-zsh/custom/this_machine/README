@@ -1,4 +1,0 @@
-This directory is excluded from the dotfiles repo, which means any files in here
-will not be persisted across other installations of the dotfiles.
-
-Place here anything that is only relevant to this machine and not to others.
